@@ -1,0 +1,11 @@
+.gradle
+gradle
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+.project
+.settings
+bin/
+.idea
+*.iml
+gradlew*

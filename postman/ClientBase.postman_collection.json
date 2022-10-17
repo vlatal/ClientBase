@@ -1,0 +1,352 @@
+{
+	"info": {
+		"_postman_id": "ee86cea1-7119-4949-8128-5f28c980484c",
+		"name": "ClientBase",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "listClients",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/clients",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"clients"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listAddresses",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/addresses",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"addresses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listAddress",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/addresses/1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"addresses",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listClient",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/clients/2",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"clients",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addClient",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"B\",\n    \"lastName\": \"C\",\n    \"billing\": {\n        \"line\": \"A\",\n        \"postalCode\": 41002,\n        \"municipality\": \"Malé Žernoseky\"\n    },\n    \"mailing\": null\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/clients",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"clients"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteClient",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/clients/1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"clients",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteAddress",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/addresses/8",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"addresses",
+						"8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "replaceClient",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"B0\",\n    \"lastName\": \"C0\",\n    \"billing\": {\n        \"id\": 2,\n        \"line\": \"A0\",\n        \"postalCode\": 61002,\n        \"municipality\": \"Malé Žabovřesky\"\n    },\n    \"mailing\": {\n        \"line\": \"AB0\",\n        \"postalCode\": 65656,\n        \"municipality\": \"BaBa\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/clients/1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"clients",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "replaceClient modifyAddress",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"B0\",\n    \"lastName\": \"C0\",\n    \"billing\": {\n        \"id\": 2,\n        \"line\": \"A0\",\n        \"postalCode\": 61002,\n        \"municipality\": \"Malé Žabovřesky\"\n    },\n    \"mailing\": {\n        \"id\": 11,\n        \"line\": \"AC0\",\n        \"postalCode\": 65656,\n        \"municipality\": \"CaCa\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/clients/1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"clients",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addClient no billing",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"E\",\n    \"lastName\": \"F\",\n    \"billing\": null,\n    \"mailing\": {\n        \"line\": \"A\",\n        \"postalCode\": 41002,\n        \"municipality\": \"Malé Žernoseky\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/clients",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"clients"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addClient none",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"K\",\n    \"lastName\": \"L\",\n    \"billing\": null,\n    \"mailing\": null\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/clients",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"clients"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addClient both",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"H\",\n    \"lastName\": \"I\",\n    \"billing\": {\n        \"line\": \"G\",\n        \"postalCode\": 60200,\n        \"municipality\": \"Brno\"\n    },\n    \"mailing\": {\n        \"line\": \"D\",\n        \"postalCode\": 11000,\n        \"municipality\": \"Praha\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/clients",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"clients"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addAddress",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-XSRF-TOKEN",
+						"value": "{{csrfToken}}",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"line\": \"D\",\n    \"postalCode\": 11000,\n    \"municipality\": \"Praha\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/addresses",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"addresses"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "test",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "test",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://localhost:8080",
+			"type": "default"
+		},
+		{
+			"key": "csrfToken",
+			"value": "e2cee640-03ae-4c18-9339-2d2596f55fd9",
+			"type": "default"
+		}
+	]
+}

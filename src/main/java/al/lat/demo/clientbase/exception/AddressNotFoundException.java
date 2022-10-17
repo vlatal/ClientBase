@@ -1,0 +1,12 @@
+package al.lat.demo.clientbase.exception;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.ResponseStatus;
+
+@ResponseStatus(value = HttpStatus.NOT_FOUND)
+public class AddressNotFoundException extends Exception {
+
+    public AddressNotFoundException(Long id) {
+        super(String.format("Address '%d' could not be found.", id));
+    }
+}
